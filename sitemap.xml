@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://redhat-scholars.github.io/course-template/rhs-build-course/develop.html</loc>
-<lastmod>2020-07-01T13:13:54.518Z</lastmod>
+<loc>https://redhat-scholars.github.io/build-course/rhs-build-course/develop.html</loc>
+<lastmod>2020-07-01T13:23:04.224Z</lastmod>
 </url>
 <url>
-<loc>https://redhat-scholars.github.io/course-template/rhs-build-course/index.html</loc>
-<lastmod>2020-07-01T13:13:54.518Z</lastmod>
+<loc>https://redhat-scholars.github.io/build-course/rhs-build-course/index.html</loc>
+<lastmod>2020-07-01T13:23:04.224Z</lastmod>
 </url>
 <url>
-<loc>https://redhat-scholars.github.io/course-template/rhs-build-course/setup.html</loc>
-<lastmod>2020-07-01T13:13:54.518Z</lastmod>
+<loc>https://redhat-scholars.github.io/build-course/rhs-build-course/setup.html</loc>
+<lastmod>2020-07-01T13:23:04.224Z</lastmod>
 </url>
 </urlset>

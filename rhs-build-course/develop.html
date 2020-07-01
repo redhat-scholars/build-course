@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Deploy Service :: RedHat Scholars::Course Template</title>
-    <link rel="canonical" href="https://redhat-scholars.github.io/course-template/rhs-build-course/develop.html">
+    <title>Writing a RedHat Scholars Course(Dev Mode) :: RedHat Scholars::Course Template</title>
+    <link rel="canonical" href="https://redhat-scholars.github.io/build-course/rhs-build-course/develop.html">
     <link rel="prev" href="setup.html#prerequisite">
     <link rel="next" href="#create-project">
     <meta name="generator" content="Antora 2.2.0">
@@ -18,7 +18,7 @@
     <div class="navbar-brand">
       <a class="navbar-item" href="https://developers.redhat.com" target="_blank"><img
           src="../_/img/header_logo.png" height="40px" alt="Red Hat Developer Program"></a>
-      <a class="navbar-item" href="https://redhat-scholars.github.io/course-template">RedHat Scholars::Course Template</a>
+      <a class="navbar-item" href="https://redhat-scholars.github.io/build-course">RedHat Scholars::Course Template</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -148,83 +148,8 @@
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Deploy Service</h1>
-<div class="sect1">
-<h2 id="service"><a class="anchor" href="#service"></a>The Service</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The code:</p>
-</div>
-<div class="listingblock lines_7 console-input">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Main {
+<h1 class="page">Writing a RedHat Scholars Course(Dev Mode)</h1>
 
-    public static void main(String[] args) {
-
-    }
-
-}
-
-./mvnw compile</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="package"><a class="anchor" href="#package"></a>Packaging the Service</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can package the next bash script:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Unresolved include directive in modules/ROOT/pages/develop.adoc - include::example$run.sh[]</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="deploy"><a class="anchor" href="#deploy"></a>Deploy the Service</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>And then you can deploy the service and execute commands inside:</p>
-</div>
-<div class="paragraph">
-<p>Check that the pod is up and running:</p>
-</div>
-<div class="listingblock lines_space console-input">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl get pods</code></pre>
-</div>
-</div>
-<div class="listingblock console-output">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">NAME                        READY   STATUS    RESTARTS   AGE
-apps   1/1     Running   0          5s</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Then let&#8217;s go into the running pod to execute some commands:</p>
-</div>
-<div class="listingblock console-input">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl exec -ti apps /bin/bash</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Change the pod name with your pod name.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
 <nav class="pagination">
   <span class="prev"><a href="setup.html#prerequisite">Prerequisites</a></span>
   <span class="next"><a href="#create-project">Create Project</a></span>
