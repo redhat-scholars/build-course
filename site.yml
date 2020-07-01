@@ -3,18 +3,18 @@ runtime:
 
 site:
   title: RedHat Scholars::Course Template
-  url: https://redhat-scholars.github.io/course-template
+  url: https://redhat-scholars.github.io/build-course
   start_page: rhs-build-course::index.adoc
 
 content:
   sources:
-    - url: git@github.com:redhat-scholars/build-course.git
-      tags: []
-      branches: master
+    - url: .
+      branches: HEAD
       start_path: documentation
 
 asciidoc:
   attributes:
+    title: Writing a RedHat Scholars Course(Dev Mode)
     release-version: master
     page-pagination: true
   extensions:
