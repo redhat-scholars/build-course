@@ -1,0 +1,12 @@
+* xref:setup.adoc[Setup]
+** xref:setup.adoc#prerequisite[Prerequisites]
+
+* xref:develop.adoc[Develop]
+** xref:develop.adoc#create-project[Create Project]
+** xref:develop.adoc#file-structure[Repository Organization]
+** xref:develop.adoc#branding[Branding]
+** xref:develop.adoc#navigation[Navigation]
+** xref:develop.adoc#code-blocks[Code Blocks]
+** xref:develop.adoc#output-blocks[Output Blocks]
+** xref:develop.adoc#including-remote-content[Inculde Remote Content]
+** xref:develop.adoc#setup-devmode[Setup Development Mode]

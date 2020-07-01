@@ -1,0 +1,7 @@
+name: rhs-build-course
+title: Writing a RedHat scholar Course
+version: master
+nav:
+  - modules/ROOT/nav.adoc
+
+start_page: ROOT:index.adoc
