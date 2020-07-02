@@ -2,7 +2,14 @@
 
 include::_attributes.adoc[]
 
+[#authoring-new-course]
 == Authoring Course
+
+Apart from features that are part of AsciiDoc and Antora, the course templates some extra customizations, like:
+
+- Clipboard
+- Tabs
+- Differntiating Console Input vs Output
 
 [#custom-macros]
 == Custom Macros
@@ -11,9 +18,125 @@ Apart from https://docs.antora.org/antora/2.3/asciidoc/ui-macros/[built in macro
 
 === Copy-Pasteable Code 
 
+In many cases you want the code/commands to be copy-pasteable from the courseware, you can use the special styling `.console-input` on the AsciiDoc source blocks to have clipboard enabled for the source block.
+
+E.g. 
+
+[source,adoc]
+-----
+[.console-input]
+[source,adoc]
+----
+kubectl get pods
+----
+-----
+
+The content above will produce the following output as part of the course site,
+
+[.console-input]
+[source,adoc]
+----
+kubectl get pods
+----
+
 === Console Output
+
+As you have commands that gets executed, you may wish to show the out of the command. Like adding special style source block for console input, you can add similar style like `.console-output` to the source block. 
+
+E.g. 
+
+[source,adoc]
+-----
+[.console-input]
+[source,adoc]
+----
+echo "Hello World!"
+----
+-----
+
+The content above will produce the following output as part of the course site,
+
+[.console-output]
+[source,bash]
+----
+Hello World!
+----
 
 === Tabs
 
+When you want to seprate the content using *Tabs*, you can use the `[tabs]` macro. You can add the tab as shown:
+
+[.console-input]
+[source,adoc]
+----
+[tabs]
+====
+one::
++
+--
+--
+two::
++
+--
+--
+====
+----
+
+The tab macro will produce an output as shown below:
+
+[tabs]
+====
+One::
++
+--
+[.console-input]
+[source,bash]
+----
+echo Hello World!
+----
+--
+Two::
++
+--
+[.console-output]
+[source,bash]
+----
+Hello World!
+----
+--
+====
+
 [#live-preview]
 == Live Preview
+
+When working with course development, you dont need to publish the site to view the changes. The template is enabled with live reload capability. 
+
+Follow the steps outlined below to start the live reload mode:
+
+- From the root the courseware repository run the following command:
+
+[.console-input]
+[source,bash]
+----
+npm install
+----
+
+or 
+
+[.console-input]
+[source,bash]
+----
+yarn install
+----
+
+-  Once node modules are installed, run the following command to start the development mode: 
+
+[.console-input]
+[source,bash]
+----
+gulp
+----
+
+The gulp will start will start a local site server at http://localhost:3000.
+
+Once the local dev server is up, any changes made to the course source repository files will trigger the build and reload of the site with new changes.
