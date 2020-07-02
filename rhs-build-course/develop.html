@@ -101,9 +101,9 @@
   </li>
 </ul>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="develop.html">Authoring Course</a>
+    <a class="nav-link" href="#authoring-new-course">Authoring Course</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="#custom-macros">Custom Macros</a>
@@ -156,7 +156,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Writing a RedHat scholar Course</a></li>
-    <li><a href="develop.html">Authoring Course</a></li>
+    <li><a href="#authoring-new-course">Authoring Course</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/redhat-scholars/build-course/edit/master/documentation/modules/ROOT/pages/develop.adoc">Edit this Page</a></div>
@@ -165,9 +165,24 @@
 <article class="doc">
 <h1 class="page">RedHat Scholars Courseware</h1>
 <div class="sect1">
-<h2 id="_authoring_course"><a class="anchor" href="#_authoring_course"></a>Authoring Course</h2>
+<h2 id="authoring-new-course"><a class="anchor" href="#authoring-new-course"></a>Authoring Course</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>Apart from features that are part of AsciiDoc and Antora, the course templates some extra customizations, like:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Clipboard</p>
+</li>
+<li>
+<p>Tabs</p>
+</li>
+<li>
+<p>Differntiating Console Input vs Output</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -178,22 +193,157 @@
 </div>
 <div class="sect2">
 <h3 id="_copy_pasteable_code"><a class="anchor" href="#_copy_pasteable_code"></a>Copy-Pasteable Code</h3>
-
+<div class="paragraph">
+<p>In many cases you want the code/commands to be copy-pasteable from the courseware, you can use the special styling <code>.console-input</code> on the AsciiDoc source blocks to have clipboard enabled for the source block.</p>
+</div>
+<div class="paragraph">
+<p>E.g.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">[.console-input]
+[source,adoc]
+----
+kubectl get pods
+----</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The content above will produce the following output as part of the course site,</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">kubectl get pods</code></pre>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_console_output"><a class="anchor" href="#_console_output"></a>Console Output</h3>
-
+<div class="paragraph">
+<p>As you have commands that gets executed, you may wish to show the out of the command. Like adding special style source block for console input, you can add similar style like <code>.console-output</code> to the source block.</p>
+</div>
+<div class="paragraph">
+<p>E.g.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">[.console-input]
+[source,adoc]
+----
+echo "Hello World!"
+----</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The content above will produce the following output as part of the course site,</p>
+</div>
+<div class="listingblock console-output">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Hello World!</code></pre>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_tabs"><a class="anchor" href="#_tabs"></a>Tabs</h3>
-
+<div class="paragraph">
+<p>When you want to seprate the content using <strong>Tabs</strong>, you can use the <code>[tabs]</code> macro. You can add the tab as shown:</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">[tabs]
+====
+one::
++
+--
+--
+two::
++
+--
+--
+====</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The tab macro will produce an output as shown below:</p>
+</div>
+<div class="tabset is-loading">
+<div class="ulist tabs">
+<ul>
+<li>
+<p><a id="tabset1_one"></a>One</p>
+</li>
+<li>
+<p><a id="tabset1_two"></a>Two</p>
+</li>
+</ul>
+</div>
+<div class="content">
+<div class="tab-pane" aria-labelledby="tabset1_one">
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">echo Hello World!</code></pre>
+</div>
+</div>
+</div>
+<div class="tab-pane" aria-labelledby="tabset1_two">
+<div class="listingblock console-output">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Hello World!</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="live-preview"><a class="anchor" href="#live-preview"></a>Live Preview</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>When working with course development, you dont need to publish the site to view the changes. The template is enabled with live reload capability.</p>
+</div>
+<div class="paragraph">
+<p>Follow the steps outlined below to start the live reload mode:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>From the root the courseware repository run the following command:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">npm install</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">yarn install</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Once node modules are installed, run the following command to start the development mode:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">gulp</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The gulp will start will start a local site server at <a href="http://localhost:3000" class="bare">http://localhost:3000</a>.</p>
+</div>
+<div class="paragraph">
+<p>Once the local dev server is up, any changes made to the course source repository files will trigger the build and reload of the site with new changes.</p>
+</div>
 </div>
 </div>
 <nav class="pagination">
