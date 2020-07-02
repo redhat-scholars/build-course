@@ -1,8 +1,13 @@
-= {title}
+= Extras
+:navtitle: Extras
 
 include::_attributes.adoc[]
 
-== Develop
-
 [#vscod-snippets]
-== Development Mode
+== VSCode Snippets
+
+To aid easier development with tools like https://code.visualstudio.com[Visual Studio Code], the course template repository provides you with a https://github.com/redhat-scholars/courseware-template/blob/master/vscode-asciidoc-extra.json[snippets] that can be added to vscode, to allow quick inserts of commonly used snippets. 
+
+//TODO #1 add video to show how to import and use the snippet
+
+Another handy plugin is https://github.com/asciidoctor/asciidoctor-vscode#how-to-install[asciidoctor-vscode]

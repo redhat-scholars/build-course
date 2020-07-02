@@ -1,7 +1,11 @@
 name: rhs-build-course
 title: Writing a RedHat scholar Course
 version: master
+asciidoc:
+  attributes:
+    source-language: asciidoc@
+    xrefstyle: short@
 nav:
-  - modules/ROOT/nav.adoc
+- modules/ROOT/nav.adoc
 
 start_page: ROOT:index.adoc

@@ -1,9 +1,7 @@
-= {title}
+= Authoring the Course Content
+:navtitle: Authoring the Course
 
 include::_attributes.adoc[]
-
-[#authoring-new-course]
-== Authoring Course
 
 Apart from features that are part of AsciiDoc and Antora, the course templates some extra customizations, like:
 

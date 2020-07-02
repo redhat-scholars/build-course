@@ -1,5 +1,9 @@
-= {title}
+= Branding
 
 include::_attributes.adoc[]
 
-== Branding
+The tutorial or courseware UI is generated in line with how it is needed for the Antora site, with few additional elements like Clipboard Copy,  Source code coloring etc, the template is completely customizable. 
+
+The UI repository is available at https://github.com/redhat-scholars/course-ui.
+
+The UI bundle is automatically included as part of the course-template.

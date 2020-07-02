@@ -1,7 +1,5 @@
-= {title}
-include::_attributes.adoc[]
-
-== Overview
+= Overview
+:navtitle: Overview
 
 If new to AsciiDoc refer to https://docs.antora.org/antora/2.3/asciidoc/asciidoc/[primer] to get familiarized with AsciiDoc.
 

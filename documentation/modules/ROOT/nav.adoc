@@ -9,7 +9,7 @@
 ** xref:overview.adoc#partials[Include Partials ]
 ** xref:overview.adoc#including-remote-content[Inculde Remote Content]
 
-* xref:develop.adoc#authoring-new-course[Authoring Course]
+* xref:develop.adoc[Authoring Course]
 ** xref:develop.adoc#custom-macros[Custom Macros]
 ** xref:develop.adoc#live-preview[Live Preview]
 

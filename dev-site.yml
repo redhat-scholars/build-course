@@ -12,8 +12,6 @@ content:
       branches: HEAD
       start_path: documentation
 asciidoc:
-  attributes:
-    title: RedHat Scholars Courseware(Dev Mode)
   extensions:
     - ./lib/remote-include-processor.js
     - ./lib/tab-block.js
