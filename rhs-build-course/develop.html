@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Writing a RedHat Scholars Course(Dev Mode) :: RedHat Scholars::Course Template</title>
+    <title>RedHat Scholars Courseware :: RedHat Scholars Courseware</title>
     <link rel="canonical" href="https://redhat-scholars.github.io/build-course/rhs-build-course/develop.html">
-    <link rel="prev" href="setup.html#prerequisite">
-    <link rel="next" href="#create-project">
+    <link rel="prev" href="overview.html#including-remote-content">
+    <link rel="next" href="#custom-macros">
     <meta name="generator" content="Antora 2.2.0">
     <link rel="stylesheet" href="../_/css/site.css">
 <link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
@@ -18,7 +18,7 @@
     <div class="navbar-brand">
       <a class="navbar-item" href="https://developers.redhat.com" target="_blank"><img
           src="../_/img/header_logo.png" height="40px" alt="Red Hat Developer Program"></a>
-      <a class="navbar-item" href="https://redhat-scholars.github.io/build-course">RedHat Scholars::Course Template</a>
+      <a class="navbar-item" href="https://redhat-scholars.github.io/build-course">RedHat Scholars Courseware</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -80,33 +80,48 @@
   </li>
 </ul>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="develop.html">Develop</a>
+    <a class="nav-link" href="overview.html">Overview</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#create-project">Create Project</a>
+    <a class="nav-link" href="overview.html#create-project">Create a New Course</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#file-structure">Repository Organization</a>
+    <a class="nav-link" href="overview.html#file-structure">Course Directory Structure</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#branding">Branding</a>
+    <a class="nav-link" href="overview.html#navigation">Navigation</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#navigation">Navigation</a>
+    <a class="nav-link" href="overview.html#partials">Include Partials </a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#code-blocks">Code Blocks</a>
+    <a class="nav-link" href="overview.html#including-remote-content">Inculde Remote Content</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="develop.html">Authoring Course</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#custom-macros">Custom Macros</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#output-blocks">Output Blocks</a>
+    <a class="nav-link" href="#live-preview">Live Preview</a>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#including-remote-content">Inculde Remote Content</a>
+</ul>
   </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="branding.html">Branding</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="extras.html">Extras</a>
+<ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#setup-devmode">Setup Development Mode</a>
+    <a class="nav-link" href="extras.html#vscod-snippets">VSCode Snippets</a>
   </li>
 </ul>
   </li>
@@ -141,18 +156,49 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Writing a RedHat scholar Course</a></li>
-    <li><a href="develop.html">Develop</a></li>
+    <li><a href="develop.html">Authoring Course</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/redhat-scholars/build-course/edit/master/documentation/modules/ROOT/pages/develop.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Writing a RedHat Scholars Course(Dev Mode)</h1>
+<h1 class="page">RedHat Scholars Courseware</h1>
+<div class="sect1">
+<h2 id="_authoring_course"><a class="anchor" href="#_authoring_course"></a>Authoring Course</h2>
+<div class="sectionbody">
 
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-macros"><a class="anchor" href="#custom-macros"></a>Custom Macros</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Apart from <a href="https://docs.antora.org/antora/2.3/asciidoc/ui-macros/">built in macros</a> the template provides some customizations for code blocks that can be enabled with clipboard copy or seperating contnet via tabs</p>
+</div>
+<div class="sect2">
+<h3 id="_copy_pasteable_code"><a class="anchor" href="#_copy_pasteable_code"></a>Copy-Pasteable Code</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_console_output"><a class="anchor" href="#_console_output"></a>Console Output</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_tabs"><a class="anchor" href="#_tabs"></a>Tabs</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="live-preview"><a class="anchor" href="#live-preview"></a>Live Preview</h2>
+<div class="sectionbody">
+
+</div>
+</div>
 <nav class="pagination">
-  <span class="prev"><a href="setup.html#prerequisite">Prerequisites</a></span>
-  <span class="next"><a href="#create-project">Create Project</a></span>
+  <span class="prev"><a href="overview.html#including-remote-content">Inculde Remote Content</a></span>
+  <span class="next"><a href="#custom-macros">Custom Macros</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">

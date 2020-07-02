@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>RedHat Scholars Courseware :: RedHat Scholars Courseware</title>
+    <link rel="canonical" href="https://redhat-scholars.github.io/build-course/rhs-build-course/overview.html">
+    <link rel="prev" href="setup.html#prerequisite">
+    <link rel="next" href="#create-project">
+    <meta name="generator" content="Antora 2.2.0">
+    <link rel="stylesheet" href="../_/css/site.css">
+<link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://developers.redhat.com" target="_blank"><img
+          src="../_/img/header_logo.png" height="40px" alt="Red Hat Developer Program"></a>
+      <a class="navbar-item" href="https://redhat-scholars.github.io/build-course">RedHat Scholars Courseware</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Books</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">CheatSheets</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">CheatSheet A</a>
+            <a class="navbar-item" href="#">CheatSheet B</a>
+            <a class="navbar-item" href="#">CheatSheet C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Upcoming Events</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Event A</a>
+            <a class="navbar-item" href="#">Event B</a>
+            <a class="navbar-item" href="#">Event C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">More Tutorials</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Tutorial A</a>
+            <a class="navbar-item" href="#">Tutorial B</a>
+            <a class="navbar-item" href="#">Tutorial C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rhs-build-course" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Writing a RedHat scholar Course</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="setup.html">Setup</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="setup.html#prerequisite">Prerequisites</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="overview.html">Overview</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#create-project">Create a New Course</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#file-structure">Course Directory Structure</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#navigation">Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#partials">Include Partials </a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#including-remote-content">Inculde Remote Content</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="develop.html">Authoring Course</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="develop.html#custom-macros">Custom Macros</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="develop.html#live-preview">Live Preview</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="branding.html">Branding</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="extras.html">Extras</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="extras.html#vscod-snippets">VSCode Snippets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Writing a RedHat scholar Course</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Writing a RedHat scholar Course</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Writing a RedHat scholar Course</a></li>
+    <li><a href="overview.html">Overview</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/redhat-scholars/build-course/edit/master/documentation/modules/ROOT/pages/overview.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">RedHat Scholars Courseware</h1>
+<div class="sect1">
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If new to AsciiDoc refer to <a href="https://docs.antora.org/antora/2.3/asciidoc/asciidoc/">primer</a> to get familiarized with AsciiDoc.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="create-project"><a class="anchor" href="#create-project"></a>Create a New Course</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can create new course project using GitHub template, from the <a href="https://github.com/redhat-scholars" class="bare">https://github.com/redhat-scholars</a>, click "New" repository and choose the template as shown:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/choose_course_template.png" alt="choose course template">
+</div>
+</div>
+<div class="paragraph">
+<p>Fill the other details for the project and click create "Create Repository" to create the new project:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/filled_project_details.png" alt="filled project details">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="file-structure"><a class="anchor" href="#file-structure"></a>Course Directory Structure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The course repository has the following structure:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/repo_structure.png" alt="repo structure">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_apps"><a class="anchor" href="#_apps"></a>apps</h3>
+<div class="paragraph">
+<p>The apps folder is used to add any demo/example applications that will be used in course exercies, e.g. a Java application which will be used to show how to build the container image</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_documentation"><a class="anchor" href="#_documentation"></a>documentation</h3>
+<div class="paragraph">
+<p>All the content within this directory are called <a href="https://docs.antora.org/antora/2.3/page/resource-id/">resources</a> and are uniquely identifed by Antora using resource ID.</p>
+</div>
+<div class="paragraph">
+<p>The documention folder is where all the ASCIIDoc will be placed. The course site will be generated using the docs, assets from this folder.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_module_manifest"><a class="anchor" href="#_module_manifest"></a>Module Manifest</h3>
+<div class="sect3">
+<h4 id="_file_documentationantora_yml"><a class="anchor" href="#_file_documentationantora_yml"></a><strong>File</strong>: <em>documentation/antora.yml</em></h4>
+<div class="paragraph">
+<p>This is kind of the manifest file that uniquely identifies the course. More info on antora.yml is available in official <a href="https://docs.antora.org/antora/2.3/component-version-descriptor/">Antora docs</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modules"><a class="anchor" href="#_modules"></a>Modules</h3>
+<div class="sect3">
+<h4 id="_folder_documentationmodules"><a class="anchor" href="#_folder_documentationmodules"></a><strong>Folder</strong>: <em>documentation/modules</em></h4>
+<div class="paragraph">
+<p>This directory holds the various modules that are part of this course. Module is a logical seperation of content. By default a ROOT module is created as part of the template.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_navigation"><a class="anchor" href="#_navigation"></a>Navigation</h3>
+<div class="sect3">
+<h4 id="_file_documentationmodulesrootnav_adoc"><a class="anchor" href="#_file_documentationmodulesrootnav_adoc"></a><strong>File</strong>: <em>documentation/modules/ROOT/nav.adoc</em></h4>
+<div class="paragraph">
+<p>The nav.adoc holds the navgation and menus for the course. For an example the <a href="https://raw.githubusercontent.com/redhat-developer-demos/knative-tutorial-module-serving/master/modules/ROOT/nav.adoc">navigation content</a> will generate a navigation structure as shown below:</p>
+</div>
+<div class="imageblock text-right">
+<div class="content">
+<img src="_images/navigation.png" alt="navigation">
+</div>
+</div>
+<div class="paragraph">
+<p>Refer to <a href="https://docs.antora.org/antora/2.3/navigation/">Antora navgation</a> for more information.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_content_docs"><a class="anchor" href="#_content_docs"></a>Content Docs</h3>
+<div class="sect3">
+<h4 id="_folder_documentationmodulesrootpages"><a class="anchor" href="#_folder_documentationmodulesrootpages"></a><strong>Folder</strong>: <em>documentation/modules/ROOT/pages</em></h4>
+<div class="paragraph">
+<p>All the course content AsciiDoc should be placed in this folder. The template adds to example content pages like 01-setup.adoc and 02-deploy.adoc. You can use them to get started.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_attributes"><a class="anchor" href="#_attributes"></a>Attributes</h3>
+<div class="sect3">
+<h4 id="_file_documentationmodulesrootpages_attributes_adoc"><a class="anchor" href="#_file_documentationmodulesrootpages_attributes_adoc"></a><strong>File</strong>: <em>documentation/modules/ROOT/pages/_attributes.adoc</em></h4>
+<div class="paragraph">
+<p>Any attributes that will be used in the pages can be set in this doc and included in all the needed content pages via <code>include::_attributes.adoc[]</code></p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">= {title}
+include::_attributes.adoc[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>More information on how to define and use attributes is available <a href="https://docs.antora.org/antora/2.3/page/define-and-modify-attributes/">here</a>. Also check the <a href="https://docs.antora.org/antora/2.3/page/attributes/">out of box attributes</a> that are available for use.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_image_assets"><a class="anchor" href="#_image_assets"></a>Image Assets</h3>
+<div class="sect3">
+<h4 id="_folder_documentationmodulesrootassetsimages"><a class="anchor" href="#_folder_documentationmodulesrootassetsimages"></a><strong>Folder</strong>: <em>documentation/modules/ROOT/assets/images</em></h4>
+<div class="paragraph">
+<p>All the assets such as images can be placed in this folder and can be referred using the macro <code>image::&lt;your-image-path&gt;</code>. If you create a folder within this folder then your macro needs to be adjusted like <code>image::&lt;your-folder&gt;/&lt;your-image-path&gt;</code>.</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">image::&lt;your-image-path&gt;[]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
+<div class="sect3">
+<h4 id="_documentationmodulesrootexamples"><a class="anchor" href="#_documentationmodulesrootexamples"></a><strong>documentation/modules/ROOT/examples</strong></h4>
+<div class="paragraph">
+<p>If you want to inline the code in a listing with a source from a file, then add the file to this folder and use the include macro like:</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">[source,yaml]
+----
+include::examples/foo.yaml[]
+----</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Refer to <a href="https://docs.antora.org/antora/2.3/examples-directory/">docs</a> for more information on the examples directory.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="partials"><a class="anchor" href="#partials"></a>Partials</h3>
+<div class="sect3">
+<h4 id="_documentationmodulesrootpartials"><a class="anchor" href="#_documentationmodulesrootpartials"></a><strong>documentation/modules/ROOT/partials</strong></h4>
+<div class="paragraph">
+<p><a href="https://docs.antora.org/antora/2.3/partials-directory/#partials">Partials</a> allows you to reuse content(AsciiDoc) snippets via special include macro.</p>
+</div>
+<div class="paragraph">
+<p>Say for example you want to have the following AsciiDoc content:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">Check that the pod is up and running:
+
+[.lines_space]
+[.console-input]
+[source,bash, subs="+macros,+attributes"]
+----
+kubectl get pods
+----
+
+[.console-output]
+[source,bash,subs="+macros,+attributes"]
+----
+NAME                        READY   STATUS    RESTARTS   AGE
+{podname}   1/1     Running   0          5s
+----
+
+Then let's go into the running pod to execute some commands:
+
+[.console-input]
+[source,bash, subs="+macros,+attributes"]
+----
+kubectl exec -ti {podname} /bin/bash
+----
+
+NOTE: Change the pod name with your pod name.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The you can create file called <code>exec-pod.adoc</code> in the documentation/modules/ROOT/partials and include it using the include macro like:</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">include::partial$exec_pod.adoc[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The partials could be created in any module, if you wish to include a parital from a module called <code>foo</code> then its include syntax will look like:</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">include::foo:partial$exec_pod.adoc[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Refer to the <a href="https://docs.antora.org/antora/2.3/page/include-a-partial/">parital docs</a> for more patterns and customization.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="including-remote-content"><a class="anchor" href="#including-remote-content"></a>Including Remote Content</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Any remote AsciiDoc content could included using the <code>include</code> macro and using the http urls of the remote content:</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">include::https://raw.githubusercontent.com/redhat-scholars/demo-couse/master/documentation/modules/ROOT/pages/index.adoc[]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="setup.html#prerequisite">Prerequisites</a></span>
+  <span class="next"><a href="#create-project">Create a New Course</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <a class="rhd-logo" href="https://developers.redhat.com" target="_blank"></div>
+</footer>
+<script src="../_/js/vendor/clipboard.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
