@@ -1,12 +1,19 @@
 * xref:setup.adoc[Setup]
 ** xref:setup.adoc#prerequisite[Prerequisites]
 
-* xref:develop.adoc[Develop]
-** xref:develop.adoc#create-project[Create Project]
-** xref:develop.adoc#file-structure[Repository Organization]
-** xref:develop.adoc#branding[Branding]
-** xref:develop.adoc#navigation[Navigation]
-** xref:develop.adoc#code-blocks[Code Blocks]
-** xref:develop.adoc#output-blocks[Output Blocks]
-** xref:develop.adoc#including-remote-content[Inculde Remote Content]
-** xref:develop.adoc#setup-devmode[Setup Development Mode]
+* xref:overview.adoc[Overview]
+** xref:overview.adoc#create-project[Create a New Course]
+** xref:overview.adoc#file-structure[Course Directory Structure]
+** xref:overview.adoc#navigation[Navigation]
+
+** xref:overview.adoc#partials[Include Partials ]
+** xref:overview.adoc#including-remote-content[Inculde Remote Content]
+
+* xref:develop.adoc[Authoring Course]
+** xref:develop.adoc#custom-macros[Custom Macros]
+** xref:develop.adoc#live-preview[Live Preview]
+
+* xref:branding.adoc[Branding]
+
+* xref:extras.adoc[Extras]
+** xref:extras.adoc#vscod-snippets[VSCode Snippets]

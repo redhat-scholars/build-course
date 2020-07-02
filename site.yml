@@ -2,7 +2,7 @@ runtime:
   cache_dir: ./.cache/antora
 
 site:
-  title: RedHat Scholars::Course Template
+  title: RedHat Scholars Courseware
   url: https://redhat-scholars.github.io/build-course
   start_page: rhs-build-course::index.adoc
 
@@ -14,7 +14,7 @@ content:
 
 asciidoc:
   attributes:
-    title: Writing a RedHat Scholars Course(Dev Mode)
+    title: RedHat Scholars Courseware
     release-version: master
     page-pagination: true
   extensions:

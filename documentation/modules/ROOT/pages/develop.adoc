@@ -1,3 +1,19 @@
 = {title}
 
 include::_attributes.adoc[]
+
+== Authoring Course
+
+[#custom-macros]
+== Custom Macros
+
+Apart from https://docs.antora.org/antora/2.3/asciidoc/ui-macros/[built in macros] the template provides some customizations for code blocks that can be enabled with clipboard copy or seperating contnet via tabs
+
+=== Copy-Pasteable Code 
+
+=== Console Output
+
+=== Tabs
+
+[#live-preview]
+== Live Preview

@@ -1,0 +1,176 @@
+= {title}
+include::_attributes.adoc[]
+
+== Overview
+
+If new to AsciiDoc refer to https://docs.antora.org/antora/2.3/asciidoc/asciidoc/[primer] to get familiarized with AsciiDoc.
+
+[#create-project]
+== Create a New Course
+
+You can create new course project using GitHub template, from the https://github.com/redhat-scholars, click "New" repository and choose the template as shown:
+
+image::choose_course_template.png[]
+
+Fill the other details for the project and click create "Create Repository" to create the new project:
+
+image::filled_project_details.png[]
+
+[#file-structure]
+== Course Directory Structure
+
+The course repository has the following structure:
+
+image::repo_structure.png[]
+
+=== apps
+
+The apps folder is used to add any demo/example applications that will be used in course exercies, e.g. a Java application which will be used to show how to build the container image
+
+=== documentation
+
+All the content within this directory are called https://docs.antora.org/antora/2.3/page/resource-id/[resources] and are uniquely identifed by Antora using resource ID.
+
+The documention folder is where all the ASCIIDoc will be placed. The course site will be generated using the docs, assets from this folder.
+
+
+=== Module Manifest 
+
+==== *File*: _documentation/antora.yml_
+
+This is kind of the manifest file that uniquely identifies the course. More info on antora.yml is available in official https://docs.antora.org/antora/2.3/component-version-descriptor/[Antora docs]
+
+=== Modules
+
+==== *Folder*: _documentation/modules_
+
+This directory holds the various modules that are part of this course. Module is a logical seperation of content. By default a ROOT module is created as part of the template.
+
+=== Navigation
+
+==== *File*: _documentation/modules/ROOT/nav.adoc_
+
+The nav.adoc holds the navgation and menus for the course. For an example the https://raw.githubusercontent.com/redhat-developer-demos/knative-tutorial-module-serving/master/modules/ROOT/nav.adoc[navigation content] will generate a navigation structure as shown below:
+
+image::navigation.png[align="right"]
+
+Refer to https://docs.antora.org/antora/2.3/navigation/[Antora navgation] for more information.
+
+=== Content Docs
+
+==== *Folder*: _documentation/modules/ROOT/pages_
+
+All the course content AsciiDoc should be placed in this folder. The template adds to example content pages like 01-setup.adoc and 02-deploy.adoc. You can use them to get started.
+
+=== Attributes
+
+==== *File*: _documentation/modules/ROOT/pages/_attributes.adoc_
+
+Any attributes that will be used in the pages can be set in this doc and included in all the needed content pages via `include::_attributes.adoc[]`
+
+[.console-input]
+[source,adoc]
+-----
+= {title}
+\include::_attributes.adoc[]
+-----
+
+More information on how to define and use attributes is available https://docs.antora.org/antora/2.3/page/define-and-modify-attributes/[here]. Also check the https://docs.antora.org/antora/2.3/page/attributes/[out of box attributes] that are available for use.
+
+=== Image Assets
+
+==== *Folder*: _documentation/modules/ROOT/assets/images_
+
+All the assets such as images can be placed in this folder and can be referred using the macro `image::<your-image-path>`. If you create a folder within this folder then your macro needs to be adjusted like `image::<your-folder>/<your-image-path>`.
+
+[.console-input]
+[source,adoc]
+-----
+image::<your-image-path>[]
+-----
+
+=== Examples
+
+==== *documentation/modules/ROOT/examples*
+
+If you want to inline the code in a listing with a source from a file, then add the file to this folder and use the include macro like:
+
+[.console-input]
+[source,adoc]
+-----
+[source,yaml]
+----
+\include::examples/foo.yaml[]
+----
+-----
+
+Refer to https://docs.antora.org/antora/2.3/examples-directory/[docs] for more information on the examples directory.
+
+[#partials]
+=== Partials
+
+==== *documentation/modules/ROOT/partials*
+
+https://docs.antora.org/antora/2.3/partials-directory/#partials[Partials] allows you to reuse content(AsciiDoc) snippets via special include macro. 
+
+Say for example you want to have the following AsciiDoc content:
+
+[source,adoc]
+-----
+Check that the pod is up and running:
+
+[.lines_space]
+[.console-input]
+[source,bash, subs="+macros,+attributes"]
+----
+kubectl get pods
+----
+
+[.console-output]
+[source,bash,subs="+macros,+attributes"]
+----
+NAME                        READY   STATUS    RESTARTS   AGE
+{podname}   1/1     Running   0          5s
+----
+
+Then let's go into the running pod to execute some commands:
+
+[.console-input]
+[source,bash, subs="+macros,+attributes"]
+----
+kubectl exec -ti {podname} /bin/bash
+----
+
+NOTE: Change the pod name with your pod name.
+
+-----
+
+The you can create file called `exec-pod.adoc` in the documentation/modules/ROOT/partials and include it using the include macro like:
+
+[.console-input]
+[source,adoc]
+-----
+\include::partial$exec_pod.adoc[]
+-----
+
+The partials could be created in any module, if you wish to include a parital from a module called `foo` then its include syntax will look like:
+
+[.console-input]
+[source,adoc]
+------
+\include::foo:partial$exec_pod.adoc[]
+------
+
+Refer to the https://docs.antora.org/antora/2.3/page/include-a-partial/[parital docs] for more patterns and customization.
+
+[#including-remote-content]
+== Including Remote Content
+
+Any remote AsciiDoc content could included using the `include` macro and using the http urls of the remote content:
+
+[.console-input]
+[source,adoc]
+------
+\include::https://raw.githubusercontent.com/redhat-scholars/demo-couse/master/documentation/modules/ROOT/pages/index.adoc[]
+------
+

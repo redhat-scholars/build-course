@@ -1,20 +1,3 @@
-= Welcome to Template Tutorial
-:page-layout: home
-:!sectids:
+= Building the courseware 
 
-[.text-center.strong]
-== Publish Services to Kubernetes
-
-A Kubernetes tutorial to show how you can deploy a Java service to a Kubernetes cluster as it was a child game.
-
-[.tiles.browse]
-== Browse modules
-
-[.tile]
-.xref:01-setup.adoc[Get Started]
-* xref:01-setup.adoc#minikube[Minikube]
-
-[.tile]
-.xref:02-deploy.adoc[Deploying]
-* xref:02-deploy.adoc#package[Package the Application]
-* xref:02-deploy.adoc#deploy[Deploy the Application]
+This site serves a get started guide for the courseware development. The course and site are built using https://asciidoctor.org/[ASCIIDoc] and https://docs.antora.org/antora/2.3/[Antora].  Though this guide provides some quick starts for any detailed information, its better to refer to official docs.

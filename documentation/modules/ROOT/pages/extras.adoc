@@ -1,0 +1,8 @@
+= {title}
+
+include::_attributes.adoc[]
+
+== Develop
+
+[#vscod-snippets]
+== Development Mode

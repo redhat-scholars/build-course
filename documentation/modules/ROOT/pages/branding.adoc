@@ -1,0 +1,5 @@
+= {title}
+
+include::_attributes.adoc[]
+
+== Branding
