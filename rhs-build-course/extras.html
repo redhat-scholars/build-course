@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Extras :: RedHat Scholars Courseware</title>
     <link rel="canonical" href="https://redhat-scholars.github.io/build-course/rhs-build-course/extras.html">
-    <link rel="prev" href="branding.html">
+    <link rel="prev" href="workflows.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../_/css/site.css">
 <link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
@@ -95,15 +95,27 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="overview.html#partials">Include Partials </a>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="overview.html#including-remote-content">Inculde Remote Content</a>
-  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="develop.html">Authoring Course</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="remote_content.html">Including Remote Content</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="remote_content.html#include-raw">Include Raw</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="remote_content.html#include-stub">Stub and Include</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="remote_content.html#include-site">Multi Site</a>
+  </li>
+</ul>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="develop.html#custom-macros">Custom Macros</a>
   </li>
@@ -115,10 +127,16 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="branding.html">Branding</a>
   </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="workflows.html">Workflows</a>
+  </li>
   <li class="nav-item is-current-page" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="extras.html">Extras</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#using-credentials">Using User Credentials</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="#vscod-snippets">VSCode Snippets</a>
   </li>
@@ -164,6 +182,36 @@
 <article class="doc">
 <h1 class="page">Extras</h1>
 <div class="sect1">
+<h2 id="using-credentials"><a class="anchor" href="#using-credentials"></a>Using Credentials</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>At many cases when running workshops, it might be required that we may need to pass username and password that needs to be updated in the instructions.</p>
+</div>
+<div class="paragraph">
+<p>The courseware UI is built in to handle the query parameters passed as <strong>USER</strong> and <strong>PASSWORD</strong> to be automatically replaced in the documentation.</p>
+</div>
+<div class="paragraph">
+<p>For the replacement to happen the content documentation should have the following tokens:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>%USER% or $USERNAME</p>
+</li>
+<li>
+<p>%PASSWORD% or $PASSWORD</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Hello <strong>%USER%</strong> your password is <strong>%PASSWORD%</strong></p>
+</div>
+<div class="paragraph">
+<p>If you have open the <a href="https://redhat-scholars.github.io/build-course/rhs-build-course/extras.html#using-credentials?USER=foo&amp;PASSWORD=bar" target="_blank" rel="noopener">url</a>, you will see the same page with tokens replaced.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="vscod-snippets"><a class="anchor" href="#vscod-snippets"></a>VSCode Snippets</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -175,7 +223,7 @@
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="branding.html">Branding</a></span>
+  <span class="prev"><a href="workflows.html">Workflows</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">

@@ -96,15 +96,27 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="#partials">Include Partials </a>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#including-remote-content">Inculde Remote Content</a>
-  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="develop.html">Authoring Course</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="remote_content.html">Including Remote Content</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="remote_content.html#include-raw">Include Raw</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="remote_content.html#include-stub">Stub and Include</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="remote_content.html#include-site">Multi Site</a>
+  </li>
+</ul>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="develop.html#custom-macros">Custom Macros</a>
   </li>
@@ -117,9 +129,15 @@
     <a class="nav-link" href="branding.html">Branding</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="workflows.html">Workflows</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="extras.html">Extras</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="extras.html#using-credentials">Using User Credentials</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="extras.html#vscod-snippets">VSCode Snippets</a>
   </li>
@@ -174,6 +192,11 @@
 <div class="sect1">
 <h2 id="create-project"><a class="anchor" href="#create-project"></a>Create a New Course</h2>
 <div class="sectionbody">
+<div class="videoblock text-center">
+<div class="content">
+<iframe width="640" height="480" src="https://www.youtube.com/embed/TjpTeMs_BSM?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
 <div class="paragraph">
 <p>You can create new course project using GitHub template, from the <a href="https://github.com/redhat-scholars" class="bare">https://github.com/redhat-scholars</a>, click "New" repository and choose the template as shown:</p>
 </div>
@@ -372,19 +395,6 @@ NOTE: Change the pod name with your pod name.</code></pre>
 <div class="paragraph">
 <p>Refer to the <a href="https://docs.antora.org/antora/2.3/page/include-a-partial/">parital docs</a> for more patterns and customization.</p>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="including-remote-content"><a class="anchor" href="#including-remote-content"></a>Including Remote Content</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Any remote AsciiDoc content could included using the <code>include</code> macro and using the http urls of the remote content:</p>
-</div>
-<div class="listingblock console-input">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">include::https://raw.githubusercontent.com/redhat-scholars/demo-couse/master/documentation/modules/ROOT/pages/index.adoc[]</code></pre>
 </div>
 </div>
 </div>

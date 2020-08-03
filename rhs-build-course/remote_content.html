@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Remote Content :: RedHat Scholars Courseware</title>
+    <link rel="canonical" href="https://redhat-scholars.github.io/build-course/rhs-build-course/remote_content.html">
+    <link rel="prev" href="develop.html">
+    <link rel="next" href="develop.html#custom-macros">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../_/css/site.css">
+<link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://developers.redhat.com" target="_blank"><img
+          src="../_/img/header_logo.png" height="40px" alt="Red Hat Developer Program"></a>
+      <a class="navbar-item" href="https://redhat-scholars.github.io/build-course">RedHat Scholars Courseware</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Books</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">CheatSheets</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">CheatSheet A</a>
+            <a class="navbar-item" href="#">CheatSheet B</a>
+            <a class="navbar-item" href="#">CheatSheet C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Upcoming Events</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Event A</a>
+            <a class="navbar-item" href="#">Event B</a>
+            <a class="navbar-item" href="#">Event C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">More Tutorials</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Tutorial A</a>
+            <a class="navbar-item" href="#">Tutorial B</a>
+            <a class="navbar-item" href="#">Tutorial C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rhs-build-course" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Writing a RedHat scholar Course</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="setup.html">Setup</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="setup.html#prerequisite">Prerequisites</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="overview.html">Overview</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="overview.html#create-project">Create a New Course</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="overview.html#file-structure">Course Directory Structure</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="overview.html#navigation">Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="overview.html#partials">Include Partials </a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="develop.html">Authoring Course</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="remote_content.html">Including Remote Content</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#include-raw">Include Raw</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#include-stub">Stub and Include</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#include-site">Multi Site</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="develop.html#custom-macros">Custom Macros</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="develop.html#live-preview">Live Preview</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="branding.html">Branding</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="workflows.html">Workflows</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="extras.html">Extras</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="extras.html#using-credentials">Using User Credentials</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="extras.html#vscod-snippets">VSCode Snippets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Writing a RedHat scholar Course</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Writing a RedHat scholar Course</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Writing a RedHat scholar Course</a></li>
+    <li><a href="develop.html">Authoring Course</a></li>
+    <li><a href="remote_content.html">Including Remote Content</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/redhat-scholars/build-course/edit/master/documentation/modules/ROOT/pages/remote_content.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Remote Content</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The are various ways to include remote content, for content published as part of tutorials of <code>redhat-scholars</code> we will follow three strategies:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Include Raw Content</p>
+</li>
+<li>
+<p>Stub and Include</p>
+</li>
+<li>
+<p>Include Content Seperate site a.k.a Multi Site</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="strategies"><a class="anchor" href="#strategies"></a>Strategies</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="include-raw"><a class="anchor" href="#include-raw"></a>Including Remote Content</h3>
+<div class="paragraph">
+<p>Any remote AsciiDoc content could included using the <code>include</code> macro and using the http urls of the remote content.</p>
+</div>
+<div class="paragraph">
+<p>Say you want to include instructions to clone a source repository and then set the <code>$TUTORIAL_HOME</code> to cloned folder then do :</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">:tutorial-url: https://github.com/redhat-developer-demos/rhd-tutorial-common.git
+:folder: my_folder
+include::https://raw.githubusercontent.com/redhat-developer-demos/rhd-tutorial-common/master/download-sources.adoc[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The included content will included in your includer document as shown:</p>
+</div>
+<div class="paragraph">
+<p>Before we start setting up the environment, let’s clone the tutorial sources and set the <code>TUTORIAL_HOME</code> environment variable to point to the root directory of the tutorial:</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git clone <a href="https://github.com/redhat-developer-demos/rhd-tutorial-common.git" class="bare">https://github.com/redhat-developer-demos/rhd-tutorial-common.git</a> my_folder</code></pre>
+</div>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">export TUTORIAL_HOME="$(pwd)/my_folder"</code></pre>
+</div>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">cd $TUTORIAL_HOME</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Where to use this strategy:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Content is located in remote repositories</p>
+</li>
+<li>
+<p>When its enough just to include a content without navigation</p>
+</li>
+<li>
+<p>The included content does not have any links to related component/module content</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="include-stub"><a class="anchor" href="#include-stub"></a>Stub and Include</h3>
+<div class="paragraph">
+<p>The strategy is called "Stub and Include", where publishing site will create stubs for the remote content to be included.</p>
+</div>
+<div class="paragraph">
+<p>E.g. Assume that you want to include the <a href="https://github.com/redhat-developer-demos/tekton-tutorial/blob/scholars-demo/documentation/modules/ROOT/pages/_partials/_tasks.adoc" target="_blank" rel="noopener">_tasks.adoc</a> from another content <strong>component</strong>  <a href="https://github.com/redhat-developer-demos/tekton-tutorial" target="_blank" rel="noopener">Tekton Tutorial</a>, then you do the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In the courseware(<strong>component</strong>) where you want to include the content, create a stub named stub_tasks.adoc with the following content:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock console-input">
+<div class="title">stub_tasks.adoc</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">= Tasks <i class="conum" data-value="1"></i><b>(1)</b>
+\include::_attributes.adoc[] <i class="conum" data-value="2"></i><b>(2)</b>
+:chapter-namespace: stub-project <i class="conum" data-value="3"></i><b>(3)</b>
+\include::master@tekton-tutorial:ROOT:partial$_tasks.adoc[] <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The title for the current content</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The attribute doc to include</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The page level attributes that is used in <code>_tasks.adoc</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The include of the external remote content <code>version@component-name:module:partial$&lt;doc_file&gt;</code> via partials.
+<div class="ulist">
+<ul>
+<li>
+<p>You can then add the navigation to stub.doc in the current component  navigation like :</p>
+</li>
+</ul>
+</div></td>
+</tr>
+</table>
+</div>
+<div class="listingblock console-output">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">* xref:stub_tasks.adoc[Tasks]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That should render remote included content within same UI context of the current site.</p>
+</div>
+<div class="paragraph">
+<p>You can view the <a href="https://redhat-scholars.github.io/demo-course/demo-tutorial/03-tasks.html#tekton-task-build-sources" target="_blank" rel="noopener">example</a> of this strategy.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Always use partials for the included content, to avoid UI context switch</p>
+</li>
+<li>
+<p>All the varibles used in includes partials, need to be overridden in the stub to avoid using the values from includes context</p>
+</li>
+<li>
+<p>Make sure the include component repository is part of the current site playbook <span class="menuseq"><b class="menu">content</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">sources</b></span></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>When to use this strategy:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Content is located in remote component repositories</p>
+</li>
+<li>
+<p>Add a navigatable link to included remote component/module content</p>
+</li>
+<li>
+<p>The navigation to included remote content should not leave/replace the current site navigation</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="include-site"><a class="anchor" href="#include-site"></a>Multi Site</h3>
+<div class="paragraph">
+<p>Some cases you might need to deliver a workshop covering two tutorials e.g. Demo Tutorial and Tekton Tutorial. In those cases just including remote content in the current component site is sufficient.</p>
+</div>
+<div class="paragraph">
+<p>Add the navigation to stub.doc in the current component  navigation like :</p>
+</div>
+<div class="listingblock console-output">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">** xref:master@tekton-tutorial:ROOT:tasks.adoc#tekton-task-build-sources[Build Cloud Native Application(Full Site)]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That should render remote included content within same UI context of the current site.</p>
+</div>
+<div class="paragraph">
+<p>You can view the <a href="https://redhat-scholars.github.io/demo-course/tekton-tutorial/tasks.html#tekton-task-build-sources" target="_blank" rel="noopener">example</a> of this strategy.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Make sure the include component repository is part of the current site playbook <span class="menuseq"><b class="menu">content</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">sources^</b></span></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>When to use this strategy:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Content is located in remote component repositories</p>
+</li>
+<li>
+<p>Add a navigatable link to included remote component/module content</p>
+</li>
+<li>
+<p>It is OK to switch other tutorial navigation context</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="develop.html">Authoring Course</a></span>
+  <span class="next"><a href="develop.html#custom-macros">Custom Macros</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <a class="rhd-logo" href="https://developers.redhat.com" target="_blank"></div>
+</footer>
+<script src="../_/js/vendor/clipboard.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
