@@ -6,6 +6,8 @@ If new to AsciiDoc refer to https://docs.antora.org/antora/2.3/asciidoc/asciidoc
 [#create-project]
 == Create a New Course
 
+video::TjpTeMs_BSM[youtube,width=640,height=480,align="center"]
+
 You can create new course project using GitHub template, from the https://github.com/redhat-scholars, click "New" repository and choose the template as shown:
 
 image::choose_course_template.png[]
@@ -161,14 +163,4 @@ The partials could be created in any module, if you wish to include a parital fr
 
 Refer to the https://docs.antora.org/antora/2.3/page/include-a-partial/[parital docs] for more patterns and customization.
 
-[#including-remote-content]
-== Including Remote Content
-
-Any remote AsciiDoc content could included using the `include` macro and using the http urls of the remote content:
-
-[.console-input]
-[source,adoc]
-------
-\include::https://raw.githubusercontent.com/redhat-scholars/demo-couse/master/documentation/modules/ROOT/pages/index.adoc[]
-------
 

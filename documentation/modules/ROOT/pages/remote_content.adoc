@@ -1,0 +1,114 @@
+= Remote Content
+:experimental:
+
+The are various ways to include remote content, for content published as part of tutorials of `redhat-scholars` we will follow three strategies:
+
+- Include Raw Content
+- Stub and Include
+- Include Content Seperate site a.k.a Multi Site
+
+[#strategies]
+== Strategies
+
+[#include-raw]
+=== Including Remote Content
+
+Any remote AsciiDoc content could included using the `include` macro and using the http urls of the remote content.
+
+Say you want to include instructions to clone a source repository and then set the `$TUTORIAL_HOME` to cloned folder then do :
+
+[.console-input]
+[source,adoc]
+------
+:tutorial-url: https://github.com/redhat-developer-demos/rhd-tutorial-common.git
+:folder: my_folder
+\include::https://raw.githubusercontent.com/redhat-developer-demos/rhd-tutorial-common/master/download-sources.adoc[]
+------
+
+The included content will included in your includer document as shown:
+
+:tutorial-url: https://github.com/redhat-developer-demos/rhd-tutorial-common.git
+:folder: my_folder
+include::https://raw.githubusercontent.com/redhat-developer-demos/rhd-tutorial-common/master/download-sources.adoc[]
+
+Where to use this strategy:
+
+- Content is located in remote repositories
+- When its enough just to include a content without navigation
+- The included content does not have any links to related component/module content
+
+[#include-stub]
+=== Stub and Include
+
+The strategy is called "Stub and Include", where publishing site will create stubs for the remote content to be included. 
+
+E.g. Assume that you want to include the https://github.com/redhat-developer-demos/tekton-tutorial/blob/scholars-demo/documentation/modules/ROOT/pages/_partials/_tasks.adoc[_tasks.adoc^] from another content *component*  https://github.com/redhat-developer-demos/tekton-tutorial[Tekton Tutorial^], then you do the following:
+
+- In the courseware(*component*) where you want to include the content, create a stub named stub_tasks.adoc with the following content:
+
+.stub_tasks.adoc
+[.console-input]
+[source,asciidoc,subs="+macros"]
+------
+= Tasks <.>
+\include::_attributes.adoc[] <.>
+:chapter-namespace: stub-project <.>
+\include::master@tekton-tutorial:ROOT:partial$_tasks.adoc[] <.>
+------
+<.> The title for the current content
+<.> The attribute doc to include
+<.> The page level attributes that is used in `_tasks.adoc`
+<.> The include of the external remote content `version@component-name:module:partial$<doc_file>` via partials.
+
+- You can then add the navigation to stub.doc in the current component  navigation like : 
+
+[.console-output]
+[source,adoc]
+----
+* xref:stub_tasks.adoc[Tasks]
+----
+
+That should render remote included content within same UI context of the current site.
+
+You can view the https://redhat-scholars.github.io/demo-course/demo-tutorial/03-tasks.html#tekton-task-build-sources[example^] of this strategy.
+
+[IMPORTANT]
+====
+* Always use partials for the included content, to avoid UI context switch
+* All the varibles used in includes partials, need to be overridden in the stub to avoid using the values from includes context
+* Make sure the include component repository is part of the current site playbook menu:content[sources]
+====
+
+When to use this strategy:
+
+- Content is located in remote component repositories
+- Add a navigatable link to included remote component/module content
+- The navigation to included remote content should not leave/replace the current site navigation
+
+[#include-site]
+=== Multi Site
+
+Some cases you might need to deliver a workshop covering two tutorials e.g. Demo Tutorial and Tekton Tutorial. In those cases just including remote content in the current component site is sufficient. 
+
+Add the navigation to stub.doc in the current component  navigation like : 
+
+[.console-output]
+[source,adoc]
+----
+** xref:master@tekton-tutorial:ROOT:tasks.adoc#tekton-task-build-sources[Build Cloud Native Application(Full Site)]
+----
+
+That should render remote included content within same UI context of the current site.
+
+You can view the https://redhat-scholars.github.io/demo-course/tekton-tutorial/tasks.html#tekton-task-build-sources[example^] of this strategy.
+
+[IMPORTANT]
+====
+* Make sure the include component repository is part of the current site playbook menu:content[sources^]
+====
+
+When to use this strategy:
+
+- Content is located in remote component repositories
+- Add a navigatable link to included remote component/module content
+- It is OK to switch other tutorial navigation context

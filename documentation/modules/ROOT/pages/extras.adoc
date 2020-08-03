@@ -3,6 +3,22 @@
 
 include::_attributes.adoc[]
 
+[#using-credentials]
+== Using Credentials
+
+At many cases when running workshops, it might be required that we may need to pass username and password that needs to be updated in the instructions. 
+
+The courseware UI is built in to handle the query parameters passed as *USER* and *PASSWORD* to be automatically replaced in the documentation. 
+
+For the replacement to happen the content documentation should have the following tokens:
+
+- %USER% or $USERNAME
+- %PASSWORD% or $PASSWORD
+
+Hello *%USER%* your password is *%PASSWORD%*
+
+If you have open the link:{site-url}/rhs-build-course/extras.html#using-credentials?USER=foo&PASSWORD=bar[url^], you will see the same page with tokens replaced.
+
 [#vscod-snippets]
 == VSCode Snippets
 
