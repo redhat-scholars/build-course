@@ -24,3 +24,4 @@
 * xref:extras.adoc[Extras]
 ** xref:extras.adoc#using-credentials[Using User Credentials]
 ** xref:extras.adoc#vscod-snippets[VSCode Snippets]
+** xref:extras.adoc#web-terminal[Web Terminal]

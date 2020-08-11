@@ -27,3 +27,19 @@ To aid easier development with tools like https://code.visualstudio.com[Visual S
 //TODO #1 add video to show how to import and use the snippet
 
 Another handy plugin is https://github.com/asciidoctor/asciidoctor-vscode#how-to-install[asciidoctor-vscode]
+
+[#web-terminal]
+== Web Terminal
+
+In order to conveniently provide all of the CLI tools needed for an
+individual to go through a course, a web-based terminal container image is
+available. This container image is based on
+link:https://tsl0922.github.io/ttyd/[TTYD], and we are maintaining our
+link:https://github.com/redhat-scholars/ttyd-openshift[own derivative].
+
+Each course should provide a set of instructions for how to deploy the
+web-based terminal into the cluster. If you have a specific set of tools that
+is not provided in the base TTYD image that Red Hat Scholars provides, you
+should create a derivative image with your tools and make it available in the
+link:https://quay.io/organization/redhat-scholars[Red Hat Scholars Quay]
+organization with a name that matches your course's ID.
