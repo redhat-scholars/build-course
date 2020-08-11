@@ -140,6 +140,9 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="#vscod-snippets">VSCode Snippets</a>
   </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#web-terminal">Web Terminal</a>
+  </li>
 </ul>
   </li>
 </ul>
@@ -219,6 +222,26 @@
 </div>
 <div class="paragraph">
 <p>Another handy plugin is <a href="https://github.com/asciidoctor/asciidoctor-vscode#how-to-install">asciidoctor-vscode</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="web-terminal"><a class="anchor" href="#web-terminal"></a>Web Terminal</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order to conveniently provide all of the CLI tools needed for an
+individual to go through a course, a web-based terminal container image is
+available. This container image is based on
+<a href="https://tsl0922.github.io/ttyd/">TTYD</a>, and we are maintaining our
+<a href="https://github.com/redhat-scholars/ttyd-openshift">own derivative</a>.</p>
+</div>
+<div class="paragraph">
+<p>Each course should provide a set of instructions for how to deploy the
+web-based terminal into the cluster. If you have a specific set of tools that
+is not provided in the base TTYD image that Red Hat Scholars provides, you
+should create a derivative image with your tools and make it available in the
+<a href="https://quay.io/organization/redhat-scholars">Red Hat Scholars Quay</a>
+organization with a name that matches your course&#8217;s ID.</p>
 </div>
 </div>
 </div>
