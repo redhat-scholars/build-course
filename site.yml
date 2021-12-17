@@ -3,6 +3,7 @@ runtime:
 
 site:
   title: RedHat Scholars Courseware
+  repo: build-course
   url: https://redhat-scholars.github.io/build-course
   start_page: rhs-build-course::index.adoc
 
