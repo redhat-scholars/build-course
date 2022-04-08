@@ -16,6 +16,20 @@ Fill the other details for the project and click create "Create Repository" to c
 
 image::filled_project_details.png[]
 
+=== GitHub pages setup by repository owner
+
+One important step in generating GitHub pages is to setup the URL by clicking *About* in the upper right corner of the repository.
+
+image::setup_gh_pages_url.png[]
+
+Next, go to the https://github.com/redhat-scholars/{repo}/settings/pages[GitHub pages tab]. 
+Please make sure you set
+the source branch for the GitHub pages to `gh-pages` and save the changes.
+
+
+image::gh_pages_source_branch.png[]
+
+
 [#file-structure]
 == Course Directory Structure
 
