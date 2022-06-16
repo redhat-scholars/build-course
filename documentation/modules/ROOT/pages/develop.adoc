@@ -132,9 +132,9 @@ yarn install
 [.console-input]
 [source,bash]
 ----
-gulp
+npm run dev
 ----
 
-The gulp will start will start a local site server at http://localhost:3000.
+The npm run dev command will start a local site server at http://localhost:3000.
 
 Once the local dev server is up, any changes made to the course source repository files will trigger the build and reload of the site with new changes.
