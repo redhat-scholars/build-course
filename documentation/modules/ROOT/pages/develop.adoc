@@ -7,7 +7,7 @@ Apart from features that are part of AsciiDoc and Antora, the course templates s
 
 - Clipboard
 - Tabs
-- Differntiating Console Input vs Output
+- Differentiating Console Input vs Output
 
 [#custom-macros]
 == Custom Macros
